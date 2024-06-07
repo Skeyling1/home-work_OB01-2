@@ -1,11 +1,3 @@
-
-# 1. Создай класс Store:
-# -Атрибуты класса:
-# name: название магазина.
-# address: адрес магазина.
-# items: словарь, где ключ - название товара, а значение - его цена.
-# Например, {'apples': 0.5, 'bananas': 0.75}.
-
 # Методы класса:
 # __init__ - конструктор, который инициализирует название и адрес, а также пустой словарь дляitems`.
 # -  метод для добавления товара в ассортимент.
@@ -24,9 +16,12 @@ class Store:
         self.address = address
         self.items = {}
 
-
     def add_it(self):
-        pass
+        a = input("введите название товара")
+        price = input("назначте цену")
+        new_thng = {a : price}
+        self.items.update(new_thng)
+
 
     def del_it(self):
         pass
@@ -37,13 +32,18 @@ class Store:
     def renw_price(self):
         pass
 
-shoes_shop = Store("Best-Shoes", "Moscow")
-toys_shop = Store("Happy Kids", "Perm")
-sport_shop = Store("Fitness", "Kazan")
+shoes_shop = Store("Best-Shoes", "Москва")
+toys_shop = Store("Happy Kids", "Пермь")
+sport_shop = Store("Fitness", "Казань")
 
-shoes_shop.items.update({"Сапог" : 222, "Туфля" : 555, "Башмак" : 234})
+shoes_shop.items.update({"сапоги" : 1222, "туфли" : 1555, "кеды" : 1234})
+toys_shop.items.update({"пупс" : 176, "заяц" : 555, "лего" : 8034})
+sport_shop.items.update({"лыжи" : 17688, "ласты" : 6000, "мяч" : 500})
+
+shoes_shop.add_it()
+
 
 print(shoes_shop.name)
 print(shoes_shop.address)
-print(shoes_shop.items["Туфля"])
+print(shoes_shop.items.items())
 
