@@ -7,7 +7,8 @@
 # -Атрибуты класса:
 # name: название магазина.
 # address: адрес магазина.
-# items: словарь, где ключ - название товара, а значение - его цена. Например, {'apples': 0.5, 'bananas': 0.75}.
+# items: словарь, где ключ - название товара, а значение - его цена.
+# Например, {'apples': 0.5, 'bananas': 0.75}.
 # Методы класса:
 # __init__ - конструктор, который инициализирует название и адрес, а также пустой словарь дляitems`.
 # -  метод для добавления товара в ассортимент.
@@ -25,6 +26,21 @@ class Store:
         self.name = name
         self.address = address
         self.items = items
+
+    def add_it(self):
+        pass
+
+    def del_it(self):
+        pass
+
+    def price_it(self):
+        pass
+
+    def renw_it(self):
+        pass
+
+
+
 
 
 
