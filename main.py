@@ -33,14 +33,19 @@ class Store:
     def del_it(self):
         pass
 
-    def price_it(self):
+    def what_price(self):
         pass
 
-    def renw_it(self):
+    def renw_price(self):
         pass
 
+shoes_shop = Store("Best-Shoes", "Moscow", {})
 
+toys_shop = Store("Happy Kids", "Perm", {})
 
+sport_shop = Store("Fitness", "Kazan", {})
 
-
+print(shoes_shop.name)
+print(shoes_shop.address)
+print(shoes_shop.items)
 
