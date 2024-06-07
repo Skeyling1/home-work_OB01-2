@@ -24,13 +24,20 @@ class Store:
 
 
     def del_it(self):
-        pass
+        a = input("введите удаляемый товар")
+        self.items.pop(a)
+
 
     def what_price(self):
-        pass
+        a = input("цена товара:")
+        print(self.items.get(a))
 
     def renw_price(self):
-        pass
+        a = input("обновить цену для:")
+        price = input("назначте цену")
+        self.items.pop(a)
+        new_thng = {a: price}
+        self.items.update(new_thng)
 
 shoes_shop = Store("Best-Shoes", "Москва")
 toys_shop = Store("Happy Kids", "Пермь")
