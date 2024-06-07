@@ -47,10 +47,43 @@ shoes_shop.items.update({"сапоги" : 1222, "туфли" : 1555, "кеды" 
 toys_shop.items.update({"пупс" : 176, "заяц" : 555, "лего" : 8034})
 sport_shop.items.update({"лыжи" : 17688, "ласты" : 6000, "мяч" : 500})
 
-shoes_shop.add_it()
+while True:
+    print("\nвыберете магазин:")
+    print(f"1 - {shoes_shop.name}")
+    print(f"2 - {toys_shop.name}")
+    print(f"3 - {sport_shop.name}")
+    ch_shop = input()
+
+    if ch_shop == "1":
+        ch_shop = shoes_shop
+    elif ch_shop == "2":
+        ch_shop = toys_shop
+    elif ch_shop == "3":
+        ch_shop = sport_shop
+    print(ch_shop.name, ch_shop.address, ch_shop.items.items())
 
 
-print(shoes_shop.name)
-print(shoes_shop.address)
-print(shoes_shop.items.items())
+
+    print("""   
+     1 - для добавления товара в ассортимент
+     2 - для удаления товара из ассортимента
+     3 - для получения цены товара по его названию
+     4 - для обновления цены товара
+     0 - выход""")
+    action = input()
+    if action == "1":
+        ch_shop.add_it()
+    elif action == "2":
+        ch_shop.del_it()
+    elif action == "3":
+        ch_shop.what_price()
+    elif action == "4":
+        ch_shop.renw_price()
+    elif action == "0":
+        break
+    print(ch_shop.name, ch_shop.address, ch_shop.items.items())
+
+
+
+
 
