@@ -1,14 +1,11 @@
-# Ты разрабатываешь программное обеспечение для сети магазинов.
-# Каждый магазин в этой сети имеет свои особенности, но также существуют общие характеристики,
-# такие как адрес, название и ассортимент товаров. Ваша задача — создать класс Store,
-# который можно будет использовать для создания различных магазинов.
-# Шаги:
+
 # 1. Создай класс Store:
 # -Атрибуты класса:
 # name: название магазина.
 # address: адрес магазина.
 # items: словарь, где ключ - название товара, а значение - его цена.
 # Например, {'apples': 0.5, 'bananas': 0.75}.
+
 # Методы класса:
 # __init__ - конструктор, который инициализирует название и адрес, а также пустой словарь дляitems`.
 # -  метод для добавления товара в ассортимент.
@@ -22,10 +19,11 @@
 # В поле для ответа загрузи ссылку на GitHub-репозиторий, содержащий код проекта с реализацией задания.
 
 class Store:
-    def __init__(self, name, address, items):
+    def __init__(self, name, address):
         self.name = name
         self.address = address
-        self.items = items
+        self.items = {}
+
 
     def add_it(self):
         pass
@@ -39,13 +37,13 @@ class Store:
     def renw_price(self):
         pass
 
-shoes_shop = Store("Best-Shoes", "Moscow", {})
+shoes_shop = Store("Best-Shoes", "Moscow")
+toys_shop = Store("Happy Kids", "Perm")
+sport_shop = Store("Fitness", "Kazan")
 
-toys_shop = Store("Happy Kids", "Perm", {})
-
-sport_shop = Store("Fitness", "Kazan", {})
+shoes_shop.items.update({"Сапог" : 222, "Туфля" : 555, "Башмак" : 234})
 
 print(shoes_shop.name)
 print(shoes_shop.address)
-print(shoes_shop.items)
+print(shoes_shop.items["Туфля"])
 
